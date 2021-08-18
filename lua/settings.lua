@@ -5,11 +5,11 @@ vim.cmd "filetype plugin indent on"
 
 -- Setting indentation defaults
 local tab_size = 4
-vim.bo.expandtab = true
-vim.bo.smartindent = true
-vim.bo.tabstop = tab_size
-vim.o.softtabstop = tab_size
-vim.bo.shiftwidth = tab_size
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.tabstop = tab_size
+vim.opt.softtabstop = tab_size
+vim.opt.shiftwidth = tab_size
 
 vim.bo.fileformat = "unix" -- Makes sure to use unix format files
 vim.o.ignorecase = true -- Makes default searches case insesitive

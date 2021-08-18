@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/lux/Desktop/nvim/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20210110.0/
+Diary management	vimwiki_cheatsheet.md	/^## Diary management$/;"	s	chapter:VimWiki Cheatsheet
+Editing shortcuts	vimwiki_cheatsheet.md	/^## Editing shortcuts$/;"	s	chapter:VimWiki Cheatsheet
+Navigation	vimwiki_cheatsheet.md	/^## Navigation$/;"	s	chapter:VimWiki Cheatsheet
+Pluggin Manager	README.md	/^# Pluggin Manager$/;"	c
+Table shortcuts	vimwiki_cheatsheet.md	/^## Table shortcuts$/;"	s	chapter:VimWiki Cheatsheet
+Text objects	vimwiki_cheatsheet.md	/^## Text objects$/;"	s	chapter:VimWiki Cheatsheet
+VimWiki Cheatsheet	vimwiki_cheatsheet.md	/^# VimWiki Cheatsheet$/;"	c
+Wiki Management	vimwiki_cheatsheet.md	/^## Wiki Management$/;"	s	chapter:VimWiki Cheatsheet
+nvim	README.md	/^# nvim$/;"	c
+open_browser	lua/open_browser.lua	/^local function open_browser (url)$/;"	f
