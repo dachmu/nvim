@@ -26,7 +26,7 @@ require('telescope').setup{
         mirror = false,
       },
     },
-    file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+    file_sorter =  require'telescope.sorters'.get_fzy_sorter,
     file_ignore_patterns = {},
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
     winblend = 0,
@@ -42,6 +42,12 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+  },
+  extensions = {
+    fzy_native = {
+        override_generic_sorter = false,
+        override_file_sorter = true
+    }
   }
 }
 
@@ -49,3 +55,5 @@ vim.api.nvim_set_keymap( "n" ,"<leader>ff", "<cmd>lua require('telescope.builtin
 vim.api.nvim_set_keymap( "n" ,"<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
+
+require('telescope').load_extension('fzy_native')

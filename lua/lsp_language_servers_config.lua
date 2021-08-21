@@ -1,13 +1,13 @@
 -- LSP language servers configuration
 
-require'lspconfig'.dockerls.setup{}
-require'lspconfig'.pylsp.setup{}
-require'lspconfig'.yamlls.setup{}
-require'lspconfig'.bashls.setup{}
+require'lspconfig'.dockerls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.pylsp.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.yamlls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
 
 local home_dir = os.getenv("HOME")
 
-
+-- Setting up lua language server, Sumeko-chan is a bit needier than most
 local system_name
 if vim.fn.has("mac") == 1 then
   system_name = "macOS"
@@ -51,4 +51,19 @@ require'lspconfig'.sumneko_lua.setup {
             },
         },
     },
+    on_attach=require'completion'.on_attach
+
 }
+
+
+-- Setting up some auto complete configs
+vim.g.completion_enable_auto_popup = 0
+
+vim.o.completeopt="menuone,noinsert,noselect"
+vim.o.shortmess  = vim.o.shortmess .. "c"
+
+vim.api.nvim_set_keymap( "i", "<Tab>", "pumvisible() ? \"<C-n>\" : \"<Tab>\"", {noremap = true, expr = true})
+vim.api.nvim_set_keymap( "i", "<S-Tab>", "pumvisible() ? \"<C-p>\" : \"<S-Tab>\"", {noremap = true, expr = true})
+
+vim.api.nvim_command(":imap <tab> <Plug>(completion_smart_tab)")
+vim.api.nvim_command(":imap <s-tab> <Plug>(completion_smart_s_tab)")
