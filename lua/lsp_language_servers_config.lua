@@ -3,13 +3,10 @@
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.pylsp.setup{}
 require'lspconfig'.yamlls.setup{}
+require'lspconfig'.bashls.setup{}
 
 local home_dir = os.getenv("HOME")
 
-local bash_language_server_bin =  home_dir .. '/.yarn/bin/bash-language-server'
-require'lspconfig'.bashls.setup {
-    cmd = {bash_language_server_bin, "start"}
-}
 
 local system_name
 if vim.fn.has("mac") == 1 then
