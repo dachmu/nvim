@@ -78,6 +78,12 @@ require('packer').startup(function(use)
     -- Pretty start screen
     use 'mhinz/vim-startify'
 
+    -- Git blame, who did what
+    use 'f-person/git-blame.nvim'
+
+    -- Visual aid for git changes
+    use 'airblade/vim-gitgutter'
+
     -- add other use ... for other packer
 end)
 

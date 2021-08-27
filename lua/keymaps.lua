@@ -33,3 +33,6 @@ vim.api.nvim_set_keymap( "n", "<leader>k", ":m .-2<CR>==", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>j", ":cnext<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>k", ":cprev<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>q", ":copen<CR>", {noremap = true})
+
+-- Vim Fugitive keys
+vim.api.nvim_set_keymap( "n", "<leader>GP", ":Gwrite | :Git commit -m `=FugitiveHead()`", {noremap = true})
