@@ -31,3 +31,4 @@ vim.o.wildmenu = true -- Display all matching files when tab complete
 vim.o.wildmode = "list:longest" -- Changes completition settings
 
 vim.o.termguicolors = true -- Makes terminal look pretty, if suported
+vim.o.hidden = true -- Leave buffers open

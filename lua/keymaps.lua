@@ -29,3 +29,18 @@ vim.api.nvim_set_keymap( "i", "<C-j>", "<esc>:m .+1<CR>==", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>j", ":m .+1<CR>==", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>k", ":m .-2<CR>==", {noremap = true})
 
+-- Moving between quickfixlist
+vim.api.nvim_set_keymap( "n", "<leader>j", ":cnext<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<leader>k", ":cprev<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<leader>q", ":copen<CR>", {noremap = true})
+
+-- Write Shortcut
+vim.api.nvim_set_keymap( "i", "<C-w>", "<ESC>:w<CR>a", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<C-w>", "<ESC>:w<CR>", {noremap = true})
+
+-- Vim Fugitive keymaps
+vim.api.nvim_set_keymap( "n", "<leader>ga", ":Gwrite<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<leader>gg", ":Git <CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<leader>gc", ":Git commit -m", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<leader>gp", ":Git push <CR>", {noremap = true})
+

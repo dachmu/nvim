@@ -45,6 +45,9 @@ require('packer').startup(function(use)
     -- LSP confs, remember to set up the servers
     use 'neovim/nvim-lspconfig'
 
+    -- Completion to leverage the lsp
+    use 'nvim-lua/completion-nvim'
+
     -- Prettier LSP uis
     use 'glepnir/lspsaga.nvim'
 
@@ -53,6 +56,9 @@ require('packer').startup(function(use)
 
     -- Better Syntax hightlights, use :TSInstall <language> to install a language
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    -- Better fuzzy engine, for the fuzzy finder
+    use 'nvim-telescope/telescope-fzy-native.nvim'
 
     -- Better fuzzy finding and preview
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' }, { 'nvim-lua/popup.nvim' } } }
@@ -72,6 +78,12 @@ require('packer').startup(function(use)
     -- Pretty start screen
     use 'mhinz/vim-startify'
 
+    -- Git blame, who did what
+    use 'f-person/git-blame.nvim'
+
+    -- Visual aid for git changes
+    use 'airblade/vim-gitgutter'
+
     -- add other use ... for other packer
 end)
 
@@ -83,3 +95,8 @@ require("lualine_config")
 require("tabline_config")
 require("vimwiki_config")
 require("markdown_preview_config")
+require("git_super_push")
+
+vim.api.nvim_exec(
+    [[au FocusGained,BufEnter * :checktime]], false
+)
