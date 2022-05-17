@@ -58,11 +58,12 @@ require('packer').startup(function(use)
     -- Pretty Icons
     use 'kyazdani42/nvim-web-devicons'
 
-    -- Better Syntax hightlights, use :TSInstall <language> to install a language
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    -- Better Bracket visibility
-    use { 'p00f/nvim-ts-rainbow' }
+    -- Treesitter 
+    
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Better Syntax hightlights
+    use { 'nvim-treesitter/playground' } -- Toogles view of Treesitter syntanx tree
+    use { 'p00f/nvim-ts-rainbow' } -- Better Bracket visibility
 
     -- Better fuzzy engine, for the fuzzy finder
     use 'nvim-telescope/telescope-fzy-native.nvim'
