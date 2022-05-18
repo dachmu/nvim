@@ -45,22 +45,24 @@ require('packer').startup(function(use)
     use 'shaunsingh/nord.nvim' -- set colorscheme nord
     use { 'mcchrish/zenbones.nvim', requires = { 'rktjmp/lush.nvim' } }
 
+    -- LSP config
+    use 'neovim/nvim-lspconfig' -- Enable LSP
+    use 'williamboman/nvim-lsp-installer' -- Easy Language server install
+    -- use 'ray-x/lsp_signature.nvim' -- Better signatures
+    -- use 'glepnir/lspsaga.nvim' -- Prettier LSP uis
 
-    -- LSP confs, remember to set up the servers
-    use 'neovim/nvim-lspconfig'
+    -- Cmp Plugins
+    use 'hrsh7th/nvim-cmp' -- Completion Engine
+    use 'hrsh7th/cmp-buffer' -- buffer completions
+    use 'hrsh7th/cmp-path' -- buffer completions
+    use 'hrsh7th/cmp-cmdline' -- cmdline completions
+    use 'saadparwaiz1/cmp_luasnip' -- snippet completion
 
-    -- Completion to leverage the lsp
-    use 'nvim-lua/completion-nvim'
-
-    -- Prettier LSP uis
-    use 'glepnir/lspsaga.nvim'
 
     -- Pretty Icons
     use 'kyazdani42/nvim-web-devicons'
 
-
     -- Treesitter 
-    
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Better Syntax hightlights
     use { 'nvim-treesitter/playground' } -- Toogles view of Treesitter syntanx tree
     use { 'p00f/nvim-ts-rainbow' } -- Better Bracket visibility
@@ -71,8 +73,6 @@ require('packer').startup(function(use)
     -- Better fuzzy finding and preview
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' }, { 'nvim-lua/popup.nvim' } } }
 
-    -- Better signatures
-    use 'ray-x/lsp_signature.nvim'
 
     -- Status line pluggin
     use {
