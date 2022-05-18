@@ -1,9 +1,10 @@
-require('plugins.packer.config')
+-- Load Plugins and Configuration
+require('plugins.packer')
 require('settings.nvim-preferences')
 require('keymaps')
 require('settings.colorscheme')
-require('plugins.treesitter.config')
-require('plugins.telescope.config')
+require('plugins.treesitter')
+require('plugins.telescope')
 require('plugins.lsp')
 --require("lsp_signature_config")
 --require("lsp_language_servers_config")

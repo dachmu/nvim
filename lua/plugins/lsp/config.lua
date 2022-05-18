@@ -33,7 +33,9 @@ end
 -- map buffer local keybindings when the language server attaches
 local servers = { 
     'pyright', 
-    'tsserver' 
+    'tsserver',
+    'ccls',
+
 }
 
 for _, lsp in pairs(servers) do
