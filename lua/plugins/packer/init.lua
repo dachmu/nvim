@@ -46,6 +46,10 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-cmdline' -- cmdline completions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completion
 
+    -- Snippets
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
+
     -- Treesitter 
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Better Syntax hightlights
     use 'nvim-treesitter/playground' -- Toogles view of Treesitter syntanx tree
