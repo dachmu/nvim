@@ -1,7 +1,9 @@
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
+local packer_bootstrap = false
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+    vim.fn.execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+    packer_bootstrap = true
 end
 
 require('packer').startup(function(use)
@@ -16,7 +18,6 @@ require('packer').startup(function(use)
     use 'tpope/vim-commentary' -- Manages comments
     use 'tpope/vim-repeat' -- Allows comentary and surround work with .
     use 'tpope/vim-surround' -- Surrounding adjective with ys
-    
     -- Handles the use of pandoc conversion
     -- use 'vim-pandoc/vim-pandoc'
 
@@ -45,12 +46,13 @@ require('packer').startup(function(use)
     use 'hrsh7th/cmp-path' -- buffer completions
     use 'hrsh7th/cmp-cmdline' -- cmdline completions
     use 'saadparwaiz1/cmp_luasnip' -- snippet completion
+    use 'hrsh7th/cmp-nvim-lsp'
 
     -- Snippets
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
 
-    -- Treesitter 
+    -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Better Syntax hightlights
     use 'nvim-treesitter/playground' -- Toogles view of Treesitter syntanx tree
     use 'p00f/nvim-ts-rainbow' -- Better Bracket visibility
