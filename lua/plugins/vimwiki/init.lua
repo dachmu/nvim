@@ -1,6 +1,6 @@
 -- Personal wiki configuration
 
--- Makes vimwiki markdown links as [text](text.md) instead of [text](text) 
+-- Makes vimwiki markdown links as [text](text.md) instead of [text](text)
 vim.g.vimwiki_markdown_link_ext = 1
 vim.g.vimwiki_list = {
     {
