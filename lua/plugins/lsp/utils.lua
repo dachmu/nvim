@@ -54,7 +54,7 @@ local function highlight_document(client)
 end
 
 local function keymaps(bufnr)
-    local opts = { noremap = true, silent = true }    
+    local opts = { noremap = true, silent = true }
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -82,7 +82,7 @@ M.on_attach = function(client, bufnr)
 end
 
 
-cmp_nvim_lsp = require('cmp_nvim_lsp')
+local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 

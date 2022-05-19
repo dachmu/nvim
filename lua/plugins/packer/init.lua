@@ -37,7 +37,9 @@ require('packer').startup(function(use)
     -- LSP config
     use 'neovim/nvim-lspconfig' -- Enable LSP
     use 'williamboman/nvim-lsp-installer' -- Easy Language server install
-    -- use 'ray-x/lsp_signature.nvim' -- Better signatures
+    use 'kosayoda/nvim-lightbulb'
+    -- use ({ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' })
+    use 'ray-x/lsp_signature.nvim' -- Better signatures
     -- use 'glepnir/lspsaga.nvim' -- Prettier LSP uis
 
     -- Cmp Plugins for autocompletion
