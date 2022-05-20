@@ -44,3 +44,10 @@ vim.api.nvim_set_keymap( "n", "<leader>gg", ":Git <CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>gc", ":Git commit -m", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>gp", ":Git push <CR>", {noremap = true})
 
+-- Launch preview only on md files
+local glow_mappings_group = vim.api.nvim_create_augroup("GlowMappings", { clear = true })
+vim.api.nvim_create_autocmd("BufEnter", {
+    callback = function () vim.api.nvim_buf_set_keymap( 0 , "n", "<leader>p", ":Glow<CR>", { noremap = true }) end,
+    pattern = { "*.md" },
+    group = glow_mappings_group,
+})

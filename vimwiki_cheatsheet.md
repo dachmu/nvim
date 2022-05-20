@@ -1,6 +1,6 @@
 # VimWiki Cheatsheet
 
-_[number] refers to the wiki number, set by the order in your vimrc. The default is 1._
+[number] refers to the wiki number, set by the order in your vimrc. The default is 1.
 
 ## Wiki Management
 

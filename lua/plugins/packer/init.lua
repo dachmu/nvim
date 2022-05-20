@@ -12,6 +12,7 @@ require('packer').startup(function(use)
 
     -- Writting and Notetaking
     use 'vimwiki/vimwiki' -- Personal Wiki
+    use { "ellisonleao/glow.nvim", branch = 'main' }
 
     -- Utils
     use 'ludovicchabant/vim-gutentags' -- Automatic tag management
@@ -59,16 +60,13 @@ require('packer').startup(function(use)
     use 'nvim-treesitter/playground' -- Toogles view of Treesitter syntanx tree
     use 'p00f/nvim-ts-rainbow' -- Better Bracket visibility
 
-    -- Better fuzzy engine, for the fuzzy finder
-    use 'nvim-telescope/telescope-fzy-native.nvim'
-
-    -- Better fuzzy finding and preview
+    -- Navigation Monster Engine
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' }, { 'nvim-lua/popup.nvim' } } }
+    use 'nvim-telescope/telescope-fzy-native.nvim' -- Better fuzzy engine, for the fuzzy finder
 
     -- Ui Improvements
     use 'mhinz/vim-startify' -- Pretty start screen
     use 'crispgm/nvim-tabline' -- Touches up the tabline
-    --use 'kyazdani42/nvim-web-devicons' -- Icons Support
     use {
         'hoob3rt/lualine.nvim', -- Provides a status line
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
