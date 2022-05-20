@@ -63,6 +63,7 @@ require('packer').startup(function(use)
     -- Navigation Monster Engine
     use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/plenary.nvim' }, { 'nvim-lua/popup.nvim' } } }
     use 'nvim-telescope/telescope-fzy-native.nvim' -- Better fuzzy engine, for the fuzzy finder
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 
     -- Ui Improvements
     use 'mhinz/vim-startify' -- Pretty start screen

@@ -1,6 +1,12 @@
+-- Load telescope extensions
+require('telescope').load_extension('fzy_native')
+require('telescope').load_extension('file_browser')
+
 -- Lets Configure Telescope
 local actions = require "telescope.actions"
-require('telescope').setup{
+local file_browser_actions = require "telescope".extensions.file_browser.actions
+
+require('telescope').setup {
     defaults = {
         vimgrep_arguments = {
             'rg',
@@ -47,6 +53,13 @@ require('telescope').setup{
         fzy_native = {
             override_generic_sorter = false,
             override_file_sorter = true
+        },
+        file_browser = {
+            theme = "ivy",
+            mappings = {
+                i = {},
+                n = {}
+            }
         }
     },
     pickers = {
@@ -60,10 +73,13 @@ require('telescope').setup{
     }
 }
 
+
 -- Telescope specific keybindings
 vim.api.nvim_set_keymap( "n" ,"<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
 
-require('telescope').load_extension('fzy_native')
+-- Telescope file_browser binding
+vim.api.nvim_set_keymap( "n" ,"<leader>fe", ":Telescope file_browser<CR>", {noremap = true})
+
