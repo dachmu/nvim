@@ -1,8 +1,9 @@
 -- Load Plugins and Configuration
 require('plugins.packer')
 require('settings.nvim-preferences')
-require('keymaps')
 require('settings.colorscheme')
+require('settings.keymaps')
+require('settings.autocmds')
 require('plugins.treesitter')
 require('plugins.telescope')
 require('plugins.cmp')
@@ -13,8 +14,3 @@ require("plugins.lualine")
 require("plugins.tabline")
 require("plugins.vimwiki")
 --require("markdown_preview_config")
---require("git_super_push")
-
-vim.api.nvim_exec(
-    [[au FocusGained,BufEnter * :checktime]], false
-)
