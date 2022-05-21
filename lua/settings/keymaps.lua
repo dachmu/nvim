@@ -1,5 +1,6 @@
 -- This file contains all the keymappings
 
+
 vim.g.mapleader = " "
 
 -- Sets the dictionary for my working laguage
@@ -32,7 +33,10 @@ vim.api.nvim_set_keymap( "n", "<leader>k", ":m .-2<CR>==", {noremap = true})
 -- Moving between quickfixlist
 vim.api.nvim_set_keymap( "n", "<leader>j", ":cnext<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>k", ":cprev<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n", "<leader>q", ":copen<CR>", {noremap = true})
+
+-- Moving between buffers
+vim.api.nvim_set_keymap( "n", "<A-Right>", ":bn<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<A-Left>", ":bp<CR>", {noremap = true})
 
 -- Write Shortcut
 vim.api.nvim_set_keymap( "i", "<C-s>", "<ESC>:w<CR>a", {noremap = true})

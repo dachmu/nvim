@@ -33,7 +33,7 @@ require('telescope').setup {
         },
         file_sorter =  require'telescope.sorters'.get_fzy_sorter,
         file_ignore_patterns = {
-            ".git",
+            ".git/",
             "node_modules",
             ".cache",
             "%.o",
@@ -91,6 +91,20 @@ vim.api.nvim_set_keymap( "n" ,"<leader>ff", ":Telescope find_files hidden=true<C
 vim.api.nvim_set_keymap( "n" ,"<leader>fg", ":Telescope live_grep<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fb", ":Telescope buffers<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n" ,"<leader>fh", ":Telescope help_tags<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fm", ":Telescope marks<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fq", ":Telescope quickfix<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fk", ":Telescope keymaps<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fs", ":Telescope spell_suggest<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fr", ":Telescope registers<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fa", ":Telescope autocommands<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>ft", ":Telescope treesitter<CR>", {noremap = true})
+
+
+-- Telescope Git
+vim.api.nvim_set_keymap( "n" ,"<leader>fgc", ":Telescope git_commits<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fgb", ":Telescope git_branches<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fgs", ":Telescope git_status<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "n" ,"<leader>fgt", ":Telescope git_stash<CR>", {noremap = true})
 
 -- Telescope file_browser binding
 vim.api.nvim_set_keymap( "n" ,"<leader>fe", ":Telescope file_browser<CR>", {noremap = true})
