@@ -39,6 +39,7 @@ require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig' -- Enable LSP
     use 'williamboman/nvim-lsp-installer' -- Easy Language server install
     use 'kosayoda/nvim-lightbulb'
+    use 'jose-elias-alvarez/null-ls.nvim'
     -- use ({ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' })
     use 'ray-x/lsp_signature.nvim' -- Better signatures
     -- use 'glepnir/lspsaga.nvim' -- Prettier LSP uis
