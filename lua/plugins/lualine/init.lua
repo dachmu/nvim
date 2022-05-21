@@ -26,7 +26,12 @@ lualine.setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch'},
+    lualine_b = { {
+        "branch",
+        icons_enabled = true,
+        icon = "",
+    }
+ },
     lualine_c = {
         'filename',
         { 'diagnostics',
@@ -42,7 +47,7 @@ lualine.setup {
         'filetype',
     },
     lualine_y = { 'progress', progress },
-    lualine_z = {'location'}
+    lualine_z = { { 'location', padding = 0} }
   },
   inactive_sections = {
     lualine_a = {},
