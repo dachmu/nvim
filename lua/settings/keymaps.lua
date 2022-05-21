@@ -35,8 +35,8 @@ vim.api.nvim_set_keymap( "n", "<leader>k", ":cprev<CR>", {noremap = true})
 vim.api.nvim_set_keymap( "n", "<leader>q", ":copen<CR>", {noremap = true})
 
 -- Write Shortcut
-vim.api.nvim_set_keymap( "i", "<C-w>", "<ESC>:w<CR>a", {noremap = true})
-vim.api.nvim_set_keymap( "n", "<C-w>", "<ESC>:w<CR>", {noremap = true})
+vim.api.nvim_set_keymap( "i", "<C-s>", "<ESC>:w<CR>a", {noremap = true})
+vim.api.nvim_set_keymap( "n", "<C-s>", "<ESC>:w<CR>", {noremap = true})
 
 -- Vim Fugitive keymaps
 vim.api.nvim_set_keymap( "n", "<leader>ga", ":Gwrite<CR>", {noremap = true})
