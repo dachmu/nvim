@@ -2,6 +2,20 @@
 local status, lualine = pcall(require, "lualine")
 if (not status) then return end
 
+-- cool function for progress
+local progress = function()
+	local current_line = vim.fn.line(".")
+	local total_lines = vim.fn.line("$")
+	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
+	local line_ratio = current_line / total_lines
+	local index = math.ceil(line_ratio * #chars)
+	return chars[index]
+end
+
+local spaces = function()
+    return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
+end
+
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -13,13 +27,21 @@ lualine.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename'},
-    lualine_x = {
-      { 'diagnostics', sources = {"nvim_lsp"}, symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '} },
-        'encoding',
-        'filetype'
+    lualine_c = {
+        'filename',
+        { 'diagnostics',
+                sources = {"nvim_lsp"},
+                symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
+                always_visible = true
+        },
     },
-    lualine_y = {'progress'},
+    lualine_x = {
+        'diff',
+        spaces,
+        'encoding',
+        'filetype',
+    },
+    lualine_y = { 'progress', progress },
     lualine_z = {'location'}
   },
   inactive_sections = {

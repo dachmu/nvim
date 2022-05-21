@@ -68,6 +68,7 @@ require('packer').startup(function(use)
     -- Ui Improvements
     use 'mhinz/vim-startify' -- Pretty start screen
     use 'crispgm/nvim-tabline' -- Touches up the tabline
+    use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
     use {
         'hoob3rt/lualine.nvim', -- Provides a status line
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
@@ -78,6 +79,13 @@ require('packer').startup(function(use)
     use 'airblade/vim-gitgutter' -- Visual aid for git changes
     use 'tpope/vim-fugitive' -- Git integration
     use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } } -- Git signs in columns
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = {
+          'kyazdani42/nvim-web-devicons', -- optional, for file icon
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 
     if packer_bootstrap then
         require('packer').sync()
