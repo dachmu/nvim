@@ -22,7 +22,7 @@ lualine.setup {
     theme = 'palenight',
     component_separators = {'', ''},
     section_separators = {'', ''},
-    disabled_filetypes = {}
+    disabled_filetypes = { 'packer', 'NvimTree' }
   },
   sections = {
     lualine_a = {'mode'},

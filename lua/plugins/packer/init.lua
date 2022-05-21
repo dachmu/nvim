@@ -67,7 +67,6 @@ require('packer').startup(function(use)
 
     -- Ui Improvements
     use 'mhinz/vim-startify' -- Pretty start screen
-    use 'crispgm/nvim-tabline' -- Touches up the tabline
     use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
     use {
         'hoob3rt/lualine.nvim', -- Provides a status line
