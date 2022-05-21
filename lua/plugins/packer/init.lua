@@ -19,6 +19,7 @@ require('packer').startup(function(use)
     use 'tpope/vim-commentary' -- Manages comments
     use 'tpope/vim-repeat' -- Allows comentary and surround work with .
     use 'tpope/vim-surround' -- Surrounding adjective with ys
+    use 'akinsho/toggleterm.nvim'
     -- Handles the use of pandoc conversion
     -- use 'vim-pandoc/vim-pandoc'
 
