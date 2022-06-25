@@ -1,4 +1,4 @@
--- Load Plugins and Configuration
+-- Load Plugins and Configuration 
 require'plugins.packer'
 require'settings.nvim-preferences'
 require'settings.colorscheme'
@@ -14,7 +14,7 @@ require'plugins.lightbulb'
 require'plugins.lualine'
 require'plugins.vimwiki'
 require'plugins.bufferline'
-require'plugins.nvim-tree'
 require'plugins.toggleterm'
 require'plugins.gitsigns'
+--require'plugins.nvim-tree'
 --require("markdown_preview_config")
