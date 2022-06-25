@@ -1,6 +1,5 @@
 -- This file contains all the keymappings
 
-
 vim.g.mapleader = " "
 
 -- Sets the dictionary for my working laguage

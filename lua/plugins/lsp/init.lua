@@ -41,10 +41,10 @@ for _, lsp in pairs(servers) do
         }
     }
     if lsp == "sumneko_lua" then
-        table.insert(opts, { settings = require('plugins.lsp.settings.sumneko')["settings"] })
+        opts.settings = require('plugins.lsp.settings.sumneko')["settings"]
     end
     if lsp == "terraformls" then
-        table.insert(opts, { cmd = {'terraform-ls', 'serve'}})
+        opts.cmd = {'terraform-ls', 'serve'}
     end
     lspconfig[lsp].setup(opts)
 end
