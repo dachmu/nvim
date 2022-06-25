@@ -10,6 +10,7 @@ vim.opt.smartindent = true
 vim.opt.tabstop = tab_size
 vim.opt.softtabstop = tab_size
 vim.opt.shiftwidth = tab_size
+vim.opt.autowrite = true -- Automatically saves on most ocations
 
 vim.bo.fileformat = "unix" -- Makes sure to use unix format files
 vim.o.ignorecase = true -- Makes default searches case insesitive
