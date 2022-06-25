@@ -16,4 +16,5 @@ require'plugins.vimwiki'
 require'plugins.bufferline'
 require'plugins.nvim-tree'
 require'plugins.toggleterm'
+require'plugins.gitsigns'
 --require("markdown_preview_config")

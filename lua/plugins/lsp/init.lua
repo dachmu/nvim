@@ -13,7 +13,7 @@ require('plugins.lsp.utils').setup()
 local on_attach = require('plugins.lsp.utils').on_attach
 local handlers = require('plugins.lsp.utils').handlers
 local lspconfig = require("lspconfig")
-local servers = { 
+local servers = {
     'cmake',
     'ltex',
     'bashls',
@@ -29,22 +29,23 @@ local servers = {
     'yamlls',
     'ccls',
     'clangd',
+    'terraformls',
 }
 
-
 for _, lsp in pairs(servers) do
-    local settings = {}
-    if lsp == "sumneko_lua" then
-        settings = require('plugins.lsp.settings.sumneko')["settings"]
-    end
-    lspconfig[lsp].setup {
+    local opts = {
         on_attach = on_attach,
         handlers = handlers,
-        settings = settings,
         flags = {
-            -- This will be the default in neovim 0.7+
             debounce_text_changes = 150,
         }
     }
+    if lsp == "sumneko_lua" then
+        table.insert(opts, { settings = require('plugins.lsp.settings.sumneko')["settings"] })
+    end
+    if lsp == "terraformls" then
+        table.insert(opts, { cmd = {'terraform-ls', 'serve'}})
+    end
+    lspconfig[lsp].setup(opts)
 end
 
