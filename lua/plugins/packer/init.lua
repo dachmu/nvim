@@ -68,7 +68,12 @@ require('packer').startup(function(use)
     use { "nvim-telescope/telescope-file-browser.nvim" }
 
     -- Ui Improvements
-    use 'mhinz/vim-startify' -- Pretty start screen
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    }
     use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
     use {
         'hoob3rt/lualine.nvim', -- Provides a status line
