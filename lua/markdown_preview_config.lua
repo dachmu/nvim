@@ -33,7 +33,7 @@ vim.g.mkdp_open_to_the_world = 0
 -- Set to 1, the preview server will be available to others in your network.
 -- By default, the server only listens on localhost (127.0.0.1)._
 
-vim.api.nvim_set_keymap( "n" ,"<F8>", ":MarkdownPreview<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "i" ,"<F8>", "<ESC>:MarkdownPreview<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "n" ,"<F9>", ":MarkdownPreviewStop<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap( "i" ,"<F9>", "<ESC>:MarkdownPreviewStop<CR>", {noremap = true, silent = true})
+vim.keymap.set( "n" ,"<F8>", ":MarkdownPreview<CR>", {noremap = true, silent = true})
+vim.keymap.set( "i" ,"<F8>", "<ESC>:MarkdownPreview<CR>", {noremap = true, silent = true})
+vim.keymap.set( "n" ,"<F9>", ":MarkdownPreviewStop<CR>", {noremap = true, silent = true})
+vim.keymap.set( "i" ,"<F9>", "<ESC>:MarkdownPreviewStop<CR>", {noremap = true, silent = true})

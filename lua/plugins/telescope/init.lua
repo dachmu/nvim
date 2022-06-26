@@ -87,25 +87,25 @@ require('telescope').setup {
 
 
 -- Telescope specific keybindings
-vim.api.nvim_set_keymap( "n" ,"<leader>ff", ":Telescope find_files hidden=true<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fg", ":Telescope live_grep<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fb", ":Telescope buffers<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fh", ":Telescope help_tags<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fm", ":Telescope marks<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fq", ":Telescope quickfix<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fk", ":Telescope keymaps<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fs", ":Telescope spell_suggest<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fr", ":Telescope registers<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fa", ":Telescope autocommands<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>ft", ":Telescope treesitter<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>ff", ":Telescope find_files hidden=true<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fg", ":Telescope live_grep<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fb", ":Telescope buffers<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fh", ":Telescope help_tags<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fm", ":Telescope marks<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fq", ":Telescope quickfix<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fk", ":Telescope keymaps<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fs", ":Telescope spell_suggest<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fr", ":Telescope registers<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fa", ":Telescope autocommands<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>ft", ":Telescope treesitter<CR>", {noremap = true})
 
 
 -- Telescope Git
-vim.api.nvim_set_keymap( "n" ,"<leader>fgc", ":Telescope git_commits<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fgb", ":Telescope git_branches<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fgs", ":Telescope git_status<CR>", {noremap = true})
-vim.api.nvim_set_keymap( "n" ,"<leader>fgt", ":Telescope git_stash<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fgc", ":Telescope git_commits<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fgb", ":Telescope git_branches<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fgs", ":Telescope git_status<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fgt", ":Telescope git_stash<CR>", {noremap = true})
 
 -- Telescope file_browser binding
-vim.api.nvim_set_keymap( "n" ,"<leader>fe", ":Telescope file_browser<CR>", {noremap = true})
+vim.keymap.set( "n" ,"<leader>fe", ":Telescope file_browser<CR>", {noremap = true})
 
